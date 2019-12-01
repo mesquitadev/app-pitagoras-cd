@@ -1,0 +1,19 @@
+.card{
+background-image: url("../img/card.jpg");
+    width: 386px;
+    height: 244px;
+;
+}
+
+.barcode{
+    padding: 20px;
+    margin-left: -20px;
+    margin-top: 53px;
+    width: 230px;
+}
+
+.info{
+    color: #000;
+    display: block;
+    margin-top: 80px;
+}

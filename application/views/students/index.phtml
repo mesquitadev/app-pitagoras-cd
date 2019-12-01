@@ -1,0 +1,46 @@
+<?php require VIEWS_PATH. '/includes/header.phtml'; ?>
+<div class="box-top">
+    <div class="container">
+        <h1>Cadastros</h1>
+    </div>
+</div>
+<div class="container tagname">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Library</a></li>
+            <li class="active">Data</li>
+        </ol>
+    </div>
+</div>
+<div class="container">
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>CPF:</th>
+            <th>Criado Em:</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <?php foreach($this->students as $s):?>
+            <tr>
+                <td><?=$s['id'];?></td>
+                <td><?=$s['full_name'];?></td>
+                <td><?=$s['cpf'];?></td>
+                <td><?=date('d/m/Y H:i:s', strtotime($s['created_at']));?></td>
+                <td>
+<!--                    <a href="#" class="btn btn-warning btn-sm">Editar</a>-->
+<!--                    <a href="#" class="btn btn-danger btn-sm">Deletar</a>-->
+<!--                    <a href="#" class="btn btn-info btn-sm">Visualizar</a>-->
+                </td>
+            </tr>
+        <?php endforeach?>
+        </tbody>
+    </table>
+</div>
+<?php require VIEWS_PATH. '/includes/footer.phtml';?>
